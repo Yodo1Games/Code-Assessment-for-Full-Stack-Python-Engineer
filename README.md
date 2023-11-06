@@ -30,8 +30,8 @@ Please use **Python3**, **FastAPI** + **SQLAlchemy** + **Pytest** to complete th
 To start the code assessment, fork this repository and finish the code assessment in your own Github account.
 Create a PR that including all of your tasks and leeting `Nicky` `Terry` to review it. Also leave a comment to the PR including the infos below, so that we could better recognize you and your CV. Leave a comment like this:
 ```
-Name: 
-Email:
+Name: Terry
+Email: wh9112@gmail.com
 Application channel: Linkedin/UpWork/Yodo1 official website
 Position:
 ```
