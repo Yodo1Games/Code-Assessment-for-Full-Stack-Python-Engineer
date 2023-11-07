@@ -11,7 +11,7 @@ class Review(Base):
 
     id = Column(Integer, primary_key=True)
     text = Column(String(2048))
-    is_tagged = Column(Boolean)
+    is_tagged = Column(Boolean, default=False)
 
     review_review_tags = relationship('Review_Review_Tag', backref='review')
 
