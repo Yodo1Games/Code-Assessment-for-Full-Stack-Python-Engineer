@@ -5,7 +5,7 @@ from fastapi import HTTPException
 class TagRepository:
     def __init__(self):
         """
-        CRUD object with default methods to Create, Read, Update, Delete (CRUD).
+        CRUD object with default methods to Create Delete.
 
         **Parameters**
 
@@ -31,7 +31,6 @@ class TagRepository:
             db.refresh(db_obj)
             return db_obj
         except Exception as e:
-            print(e, "EXXXX")
             db.rollback()
             raise HTTPException(status_code=403, detail=str(e))
     
@@ -51,6 +50,5 @@ class TagRepository:
             db.commit()
             return obj
         except Exception as e:
-            print("exception while deleting", e)
             db.rollback()
             return None

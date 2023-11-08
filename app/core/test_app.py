@@ -1,4 +1,3 @@
-import random
 import unittest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine

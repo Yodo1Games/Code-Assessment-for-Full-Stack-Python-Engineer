@@ -134,3 +134,4 @@ dmypy.json
 
 # VSCode metadata
 .vscode
+test.db

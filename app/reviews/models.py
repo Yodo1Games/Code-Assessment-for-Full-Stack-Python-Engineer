@@ -9,6 +9,7 @@ class Reviews(Base):
     id = Column(Integer, primary_key=True)
     text = Column(String(2048))
     is_tagged = Column(Boolean)
+    review_review_tag = relationship('ReviewReviewTag', back_populates='reviews')
 
 
 class ReviewTag(Base):
@@ -18,6 +19,7 @@ class ReviewTag(Base):
     is_ai_tag = Column(Boolean, default=False)
     tag_id = Column(Integer, ForeignKey('tags.id'))
     tag = relationship('Tag', back_populates='review_tag')
+    review_review_tag = relationship('ReviewReviewTag', back_populates='review_tag')
 
 
 class ReviewReviewTag(Base):
@@ -25,6 +27,6 @@ class ReviewReviewTag(Base):
 
     id = Column(Integer, primary_key=True)
     review_id = Column(Integer, ForeignKey('reviews.id'))
-    review = relationship('Reviews', back_populates='reviews')
+    reviews = relationship('Reviews', back_populates='review_review_tag')
     review_tag_id = Column(Integer, ForeignKey('review_tag.id'))
-    review_tag = relationship('ReviewTag', back_populates='review_tag')
+    review_tag = relationship('ReviewTag', back_populates='review_review_tag')

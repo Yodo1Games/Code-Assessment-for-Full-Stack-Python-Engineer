@@ -16,7 +16,7 @@ class ReviewDomain:
         self.__repository = repository
     
     def create(self, id, db: Session, obj_in: TagCreateSchema):
-        return self.__repository.create(db, id, obj_in=obj_in.dict())
+        return self.__repository.create(id, db, obj_in=obj_in.dict())
 
     def get(self, page, tags, db: Session):
         return self.__repository.get(page, tags, db)
